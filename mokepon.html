@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8" />
+        <title>MOKEPON!</title>
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+        <link rel="stylesheet" href="./cssMokepon/mokepon.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <section id="seleccionar-mokepon">
+
+            <h1 class ="titulo" >
+                <a href="https://fontmeme.com/es/efecto-sombra/"><img class="fuente" src="https://fontmeme.com/permalink/230420/5f997d6c2146f98c2f6cf4103af66763.png" alt="efecto-sombra" border="0"></a>
+            </h1>
+            <h2 class="subtitulo">Elige tu mokepon:</h2>
+
+            <div id="contenedorTarjetas"class="tarjetas">
+<!-- 
+                <input type="radio" name="mokepones"id="sprinkler"/>
+                <label class="tarjetaMokepon1" for="sprinkler">
+                    <p>Sprinkler</p>
+                    <img src="./mokeponAgua.png" width="100" height="100">
+                </label> 
+
+                <input type="radio" name="mokepones"id="terranova"/>    
+                <label class="tarjetaMokepon2" for="terranova">
+                    <p>Terranova</p>
+                    <img src="./Bulbasaur.png" width="100" height="100">
+                </label>
+                
+                <input type="radio" name="mokepones"id="fireball"/>                
+                <label class="tarjetaMokepon3" for="fireball">
+                    <p>Fireball</p>
+                    <img src="./mokeponFuego.png" width="100" height="100">
+                </label>
+ -->
+            </div>
+            <button id="boton-mokepon">SELECCIONAR</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h1 class ="tituloMapa" >Desplazate hasta el mokepon que desees enfrentar:</h1>
+            <canvas id="mapa"></canvas>
+
+                <div  id="contenedorDirecciones" class="direcciones"></div>            
+                    
+                    <button id="arriba" onmouseup ="detenerMovimiento()" onmousedown ="MovimientoArriba()">Up</button>
+                    <div>    
+                        <button id="derecha" onmouseup ="detenerMovimiento()" onmousedown ="MovimientoDerecha()">Right</button>
+                        <button id="izquierda" onmouseup ="detenerMovimiento()" onmousedown ="MovimientoIzquierda()">Left</button>
+                    </div> 
+                    <button id="abajo" onmouseup ="detenerMovimiento()" onmousedown ="MovimientoAbajo()">Down</button>
+                </div>    
+        </section>
+
+        <section id ="seleccionar-ataque">
+            <h1 class ="titulo" >
+                <a href="https://fontmeme.com/es/efecto-sombra/"><img class="fuente" src="https://fontmeme.com/permalink/230420/5f997d6c2146f98c2f6cf4103af66763.png" alt="efecto-sombra" border="0"></a>
+            </h1>
+            <h2 class="subtitulo">Elige tu ataque:</h2>
+            
+            <div  id="contenedorAtaques" class="botonesAtaques">
+<!--                 <button id="boton-fuego"> FUEGO  🔥</button>
+                <button id="boton-agua"> AGUA   💧</button>
+                <button id="boton-tierra"> TIERRA ☘️</button>   -->      
+            </div>
+
+            <div id="mensajes">
+                <p id="Resultado">Que empiece el combate!</p>
+
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">REINICIAR</button>
+                </section>
+            </div>
+
+            <div class="ataques">
+                <div class="aJ">
+                    <p id="player">JUGADOR</p>
+                    <p id="vidasJugador">0<img id="bandera" src="./colombia.png" width="30" height="30"></p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataquesDelJugador"></div>
+                </div>
+                <div class="aE">
+                    <p id="player">PC</p>
+                    <p id="vidasEnemigo">0<img src="./colombia.png" width="30" height="30"></p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataquesDelEnemigo"></div>
+                </div>
+            </div>
+        </section>
+        <script defer src="./jsMokepon/codigomokepon.js"></script>
+    </body>
+</html>
